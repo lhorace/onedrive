@@ -1,7 +1,10 @@
 .*
 onedrive
-onedrive.1
 onedrive.o
 onedrive.service
 onedrive@.service
 version
+Makefile
+config.log
+config.status
+autom4te.cache/
