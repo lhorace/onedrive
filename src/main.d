@@ -118,7 +118,7 @@ Options:
 	// enable verbose logging
 	log.verbose = to!int(arguments["--verbose"].toString);
 	// print the access token
-	bool printAccessToken = arguments["print-token"].toString == "true";
+	bool printAccessToken = arguments["--print-token"].toString == "true";
 	
 	// Additional options added to support MyNAS Storage Appliance
 	// Debug the HTTPS submit operations if required
@@ -141,7 +141,7 @@ Options:
 	// Upload Only
 	bool uploadOnly = arguments["--upload-only"].toString == "true";
 	// Add a check mounts option to resolve https://github.com/abraunegg/onedrive/issues/8
-	bool checkMount = arguments[" --check-for-nomount"].toString == "true";
+	bool checkMount = arguments["--check-for-nomount"].toString == "true";
 	// Add option to skip symlinks
 	bool skipSymlinks = arguments["--skip-symlinks"].toString == "true";
 	// Add option for no remote delete
