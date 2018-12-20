@@ -128,7 +128,8 @@ int main(string[] args)
 			"version", "Print the version and exit", &printVersion
 		);
 		if (opt.helpWanted) {
-			defaultGetoptPrinter(
+			// defaultGetoptPrinter(
+			outputLongHelp(
 				"Usage: onedrive [OPTION]...\n\n" ~
 				"no option        No sync and exit",
 				opt.options
@@ -576,3 +577,12 @@ void performSync(SyncEngine sync, string singleDirectory, bool downloadOnly, boo
 	} while (count != -1);
 }
 
+void outputLongHelp(string text, Option[] opt)
+{
+	writeln(text);
+	writeln("\nOptions:");
+	foreach (it; opt) {
+		writefln("  %s %s%s\n    %s", it.optLong, it.optShort, 
+				it.required ? " (required)" : "", it.help);
+	}
+}
