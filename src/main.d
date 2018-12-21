@@ -84,7 +84,7 @@ Options:
        Forget the last saved state, perform a full sync
   --remove-directory ARG
        Remove a directory on OneDrive - no sync will be performed.
-  --single-directory 
+  --single-directory ARG
        Specify a single local directory within the OneDrive root to sync.
   --skip-symlinks 
        Skip syncing of symlinks
